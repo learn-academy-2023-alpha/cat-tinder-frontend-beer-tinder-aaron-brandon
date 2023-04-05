@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.home-content {
+  background-image: url(./assets/beertinderbg.jpg);
+  background-size: cover;
+}
+
 #footer {
   height: 4vh;
   background-color: #93794d;
@@ -11,7 +16,7 @@
 
 .not-found {
   height: 89vh;
-  background-image: url(/src/assets/NotFoundImg.jpg);
+  background-image: url(./assets/NotFoundImg.jpg);
   background-size: cover;
   color: azure;
   text-align: center;
