@@ -4,7 +4,7 @@
 }
 
 .home-content {
-  background-image: url(src/assets/beertinderbg.jpg);
+  background-image: url(./assets/beertinderbg.jpg);
   background-size: cover;
 }
 
@@ -16,7 +16,7 @@
 
 .not-found {
   height: 89vh;
-  background-image: url(/src/assets/NotFoundImg.jpg);
+  background-image: url(./assets/NotFoundImg.jpg);
   background-size: cover;
   color: azure;
   text-align: center;
