@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-// } from "reactstrap";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -16,8 +16,7 @@ const Header = () => {
 
   return (
     <div>
-      <p>Welcome To Beer Tinder</p>
-      {/* <Navbar color="faded" light>
+      <Navbar color="faded" light>
         <NavbarBrand href="/" className="nav-bar">
           Welcome To Beer Tinder
         </NavbarBrand>
@@ -32,7 +31,7 @@ const Header = () => {
             </NavItem>
           </Nav>
         </Collapse>
-      </Navbar> */}
+      </Navbar>
     </div>
   );
 };
