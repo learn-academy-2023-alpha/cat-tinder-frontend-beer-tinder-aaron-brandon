@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -7,9 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from 'reactstrap';
+} from "reactstrap";
 
-function Header(props) {
+const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
@@ -18,7 +18,7 @@ function Header(props) {
     <div>
       <Navbar color="faded" light>
         <NavbarBrand href="/" className="navbar">
-          Welcome To Beer Tinder          
+          Welcome To Beer Tinder
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
         <Collapse isOpen={!collapsed} navbar>
@@ -27,14 +27,13 @@ function Header(props) {
               <NavLink href="/components/">Components</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-              </NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap"></NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default Header;
