@@ -1,9 +1,16 @@
-import { render } from "@testing-library/react";
-import Home from "./Home";
+import { render, screen } from "@testing-library/react"
+import { BrowserRouter } from "react-router-dom"
+import Home from "./Home"
+import BeerLogo from "../assets/BeerLogo.png"
 
 describe("<Home />", () => {
   it("renders the home page", () => {
-    const div = document.createElement("div");
-    render(<Home />, div);
+    render(
+      <BrowserRouter >
+        <Home />
+      </BrowserRouter>
+    );
+    const backgroundImage = screen.getByRole("img")
+    expect(backgroundImage).toHaveAttribute("src", BeerLogo)
   });
 });

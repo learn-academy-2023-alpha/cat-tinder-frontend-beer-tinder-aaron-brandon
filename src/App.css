@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.home-content {
+  background-image: url(src/assets/beertinderbg.jpg);
+  background-size: cover;
+}
+
 #footer {
   height: 4vh;
   background-color: #93794d;
