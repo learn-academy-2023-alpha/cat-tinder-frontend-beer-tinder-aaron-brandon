@@ -1,20 +1,18 @@
-.navbar {
-  background-color: #C7B594;
+.nav-bar {
+  background-color: #c7b594;
   text-align: center;
 }
 
 #footer {
   height: 4vh;
-  background-color: #93794D;
+  background-color: #93794d;
   text-align: center;
 }
 
-.NotFound { 
+.not-found {
   height: 89vh;
   background-image: url(/src/assets/NotFoundImg.jpg);
   background-size: cover;
   color: azure;
   text-align: center;
 }
-
-

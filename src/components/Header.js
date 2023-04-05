@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <div>
       <Navbar color="faded" light>
-        <NavbarBrand href="/" className="navbar">
+        <NavbarBrand href="/" className="nav-bar">
           Welcome To Beer Tinder
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
