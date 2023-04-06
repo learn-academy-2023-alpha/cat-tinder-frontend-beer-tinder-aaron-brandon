@@ -1,38 +1,42 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import App from './App';
+import App from "./App";
 
 describe("<App />", () => {
-  it('renders the header', () => {
+  it("renders the header", () => {
     // arrange function
     render(
-      <BrowserRouter >
+      <BrowserRouter>
         <App />
       </BrowserRouter>
-    ) // Act 
-    const greeting = screen.getByText("Welcome To Beer Tinder")
+    ); // Act
+    const greeting = screen.getByText("Welcome To Beer Tinder");
     // Assert
-    expect(greeting).toBeInTheDocument()
+    expect(greeting).toBeInTheDocument();
   });
-  
-  it('renders the footer', () => {
+
+  it("renders the footer", () => {
     render(
-      <BrowserRouter >
+      <BrowserRouter>
         <App />
       </BrowserRouter>
-    ) // Act
-    const footerText = screen.getByText("Site Created By Aaron Criner & Brandon Ray")
-      // Assert
-    expect(footerText).toBeInTheDocument()
-  })
-    it('renders the home page', () => {
-      render(
-        <BrowserRouter >
-          <App />
-        </BrowserRouter>
-      ) // Act
-      const footerText = screen.getByText("Site Created By Aaron Criner & Brandon Ray")
-        // Assert
-      expect(footerText).toBeInTheDocument()
-  })
+    ); // Act
+    const footerText = screen.getByText(
+      "Site Created By Aaron Criner & Brandon Ray"
+    );
+    // Assert
+    expect(footerText).toBeInTheDocument();
+  });
+  it("renders the home page", () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    ); // Act
+    const footerText = screen.getByText(
+      "Site Created By Aaron Criner & Brandon Ray"
+    );
+    // Assert
+    expect(footerText).toBeInTheDocument();
+  });
 });

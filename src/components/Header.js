@@ -16,18 +16,25 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar color="faded" light>
-        <NavbarBrand href="/" className="nav-bar">
-          Welcome To Beer Tinder
-        </NavbarBrand>
+      <Navbar color="faded" light className="nav-bar">
+        <NavbarBrand href="/">Welcome To Beer Tinder</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/BeerIndex/">Find New Beers</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap"></NavLink>
+              <NavLink href="/BeerReview"> Review Saved Beers</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/BeerNew"> Upload A New Beer</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://untappd.com/">
+                {" "}
+                Track Your Beers on Untappd
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
