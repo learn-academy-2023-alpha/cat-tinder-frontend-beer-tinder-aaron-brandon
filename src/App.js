@@ -14,6 +14,9 @@ import mockBeers from "./mockBeers";
 const App = () => {
   // holds mock beer data in state
   const [beers, setBeers] = useState(mockBeers);
+  const createBeer = (beer) => {
+    console.log("createdBeer:", beer);
+  }
 
   return (
     <>
@@ -22,7 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/beerindex" element={<BeerIndex beers={beers} />} />
         <Route path="/beershow/:id" element={<BeerShow beers={beers} />} />
-        <Route path="/beernew" element={<BeerNew />} />
+        <Route path="/beernew" element={<BeerNew createBeer={createBeer}/>} />
         <Route path="/beeredit" element={<BeerEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
