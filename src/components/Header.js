@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import BeerLogo from "../assets/BeerLogo.png";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -15,12 +16,12 @@ const Header = () => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
+    <div id="header">
       <Navbar color="faded" light className="nav-bar">
-        <NavbarBrand href="/">Welcome To Beer Tinder</NavbarBrand>
+        <NavbarBrand href="/"> 🍺 Welcome To Beer Tinder 🍺</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
         <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
+          <Nav navbar className="nav-items">
             <NavItem>
               <NavLink href="/BeerIndex/">Find New Beers</NavLink>
             </NavItem>

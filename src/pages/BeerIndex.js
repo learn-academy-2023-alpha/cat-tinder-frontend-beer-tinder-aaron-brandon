@@ -39,8 +39,7 @@ const BeerIndex = ({ beers }) => {
 
   return (
     <>
-      <p>BEERS SHOULD DISPLAY BELOW</p>
-      <div>
+      <div id="carousel-container">
         <Carousel
           slides={slides}
           autoplay={false}
@@ -48,7 +47,6 @@ const BeerIndex = ({ beers }) => {
           onSlideChange={callback}
         />
       </div>
-      <p>BEERS SHOULD DISPLAY ABOVE</p>
     </>
   );
 };
