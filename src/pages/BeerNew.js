@@ -6,7 +6,6 @@ import {
   Label,
   Button,
   Input,
-  Col
 } from 'reactstrap'
 
 
@@ -43,7 +42,7 @@ const BeerNew = ({ createBeer }) => {
 
     <FormGroup floating>
         <Input
-          name="name"
+          name="brewery"
           placeholder="Name of Brewery"
           onChange = {handleChange}
           />
@@ -80,7 +79,7 @@ const BeerNew = ({ createBeer }) => {
 
     <FormGroup floating>
       <Input
-        name="name"
+        name="variety"
         placeholder="variety"
         onChange = {handleChange}
         />
