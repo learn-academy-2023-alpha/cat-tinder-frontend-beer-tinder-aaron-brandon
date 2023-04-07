@@ -28,7 +28,7 @@ const BeerNew = ({ createBeer }) => {
 
   return (
     <>
-    <h1>Add A New Beer</h1>
+    <h1 className="headers">Add A New Beer</h1>
     <Form className='form'>
       <FormGroup floating>
         <Input 

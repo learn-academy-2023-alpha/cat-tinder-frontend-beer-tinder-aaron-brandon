@@ -25,7 +25,7 @@ const BeerIndex = ({ beers }) => {
           <CardSubtitle className="mb-2 text-muted" tag="h6">
             {beers.brewery}
           </CardSubtitle>
-          <CardText>{`This ${beers.variety} has a ${beers.primary_flavor} flavor, with hints of ${beers.secondary_flavor}`}</CardText>
+          <CardText>{`${beers.description}`}</CardText>
           <Button>
             <NavLink to={`/beershow/${beers.id}`}>More Info</NavLink>
           </Button>
@@ -33,20 +33,20 @@ const BeerIndex = ({ beers }) => {
       </Card>
     );
   });
-  const callback = function (index) {
-    console.log("callback", index);
-  };
+  const callback = function (index) {};
 
   return (
     <>
-      <div id="carousel-container">
-        <Carousel
-          slides={slides}
-          autoplay={false}
-          interval={1000}
-          onSlideChange={callback}
-        />
-      </div>
+      {slides.length > 10 && (
+        <div id="carousel-container">
+          <Carousel
+            slides={slides}
+            autoplay={false}
+            interval={1000}
+            onSlideChange={callback}
+          />
+        </div>
+      )}
     </>
   );
 };

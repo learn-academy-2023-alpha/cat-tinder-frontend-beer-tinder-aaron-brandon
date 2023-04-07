@@ -10,6 +10,7 @@ import {
   Button,
   NavLink,
 } from "reactstrap";
+import logo from "../assets/beerimage/1.png";
 
 const BeerShow = ({ beers }) => {
   const { id } = useParams();
@@ -22,15 +23,13 @@ const BeerShow = ({ beers }) => {
             width: "18rem",
           }}
         >
-          <img alt="Sample" src="https://picsum.photos/300/200" />
+          <img alt={selectedBeer.name} src={logo} />
           <CardBody>
             <CardTitle tag="h5">{selectedBeer.name}</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
               {selectedBeer.brewery}
             </CardSubtitle>
-            <CardText>
-              {`This ${selectedBeer.variety} has a ${selectedBeer.primary_flavor} flavor, with hints of ${selectedBeer.secondary_flavor}`}
-            </CardText>
+            <CardText>{`${selectedBeer.description}`}</CardText>
             <Button>
               <NavLink href="/BeerIndex">Back To Home</NavLink>
             </Button>
