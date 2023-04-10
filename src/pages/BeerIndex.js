@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Card,
@@ -10,8 +10,9 @@ import {
 } from "reactstrap";
 import { Carousel } from "3d-react-carousal";
 
-const BeerIndex = ({ beers }) => {
-  let slides = beers.map((beers, index) => {
+const BeerIndex = ({ beers, likeBeer }) => {
+  // manage slides for carousel
+  let slides = beers?.map((beer, index) => {
     return (
       <Card
         key={index}
@@ -19,31 +20,34 @@ const BeerIndex = ({ beers }) => {
           width: "18rem",
         }}
       >
-        <img alt="Sample" src="https://picsum.photos/300/200" />
+        <img className="beer-image" alt="Sample" src={`${beer?.img}`} />
         <CardBody>
-          <CardTitle tag="h5">{beers.name}</CardTitle>
+          <CardTitle tag="h5">{beer?.name}</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
-            {beers.brewery}
+            {beer?.brewery}
           </CardSubtitle>
-          <CardText>{`${beers.description}`}</CardText>
+          <CardText>{`${beer?.description}`}</CardText>
           <Button>
-            <NavLink to={`/beershow/${beers.id}`}>More Info</NavLink>
+            <NavLink to={`/beershow/${beer?.id}`}>More Info</NavLink>
           </Button>
+          {/* <Button onClick={() => likeBeer(beer, beer.id)}>LIKE</Button>
+          <Button>
+            <NavLink to={`/beershow/${beer?.id}`}>DISLIKE</NavLink>
+          </Button> */}
         </CardBody>
       </Card>
     );
   });
-  const callback = function (index) {};
 
   return (
     <>
-      {slides.length > 10 && (
+      {slides?.length > 2 && (
         <div id="carousel-container">
           <Carousel
             slides={slides}
             autoplay={false}
-            interval={1000}
-            onSlideChange={callback}
+            interval={2500}
+            // onSlideChange={callback}
           />
         </div>
       )}

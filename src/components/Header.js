@@ -4,10 +4,10 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
   NavItem,
-  NavLink,
+  Nav,
 } from "reactstrap";
+import { NavLink } from "react-router-dom";
 import BeerLogo from "../assets/BeerLogo.png";
 
 const Header = () => {
@@ -23,19 +23,13 @@ const Header = () => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar className="nav-items">
             <NavItem>
-              <NavLink href="/BeerIndex/">Find New Beers</NavLink>
+              <NavLink to="/BeerIndex/">Find New Beers</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/BeerReview"> Review Saved Beers</NavLink>
+              <NavLink to="/BeerReview"> Review Saved Beers</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/BeerNew"> Upload A New Beer</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://untappd.com/">
-                {" "}
-                Track Your Beers on Untappd
-              </NavLink>
+              <NavLink to="/BeerNew"> Upload A New Beer</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

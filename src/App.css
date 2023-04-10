@@ -21,6 +21,7 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  height: 80%;
 }
 
 .home {
@@ -50,6 +51,18 @@ body {
   align-self: center;
 }
 
+/* .slider-container .card {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+.beer-image {
+  max-height: 60vh;
+  max-width: auto;
+  padding: 10px 25px 10px 25px;
+}
+
 #footer {
   background-color: #93794d;
   text-align: center;
@@ -58,6 +71,10 @@ body {
   bottom: 0;
   width: 100%;
   height: 40px;
+}
+
+.react-3d-carousel {
+  margin-top: 50px;
 }
 
 .not-found {
